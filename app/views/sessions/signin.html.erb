@@ -1,0 +1,9 @@
+<%= form_with(model: @user, url: user_path(@user)) do |f| %>
+    <%= f.label :user_name %>
+    <%= f.collection_select :user_name, User.all, :id, :name %>
+    <br>
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+    <br>
+    <%= f.submit "Sign In" %>
+<% end %>
